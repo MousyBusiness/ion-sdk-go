@@ -22,6 +22,11 @@ func (j JoinConfig) SetNoAutoSubscribe() *JoinConfig {
 	return &j
 }
 
+func (j JoinConfig) SetNoAutoSubscribeDataChannels() *JoinConfig {
+	j["NoAutoSubscribeDataChannels"] = "true"
+	return &j
+}
+
 func SetRelay(j JoinConfig) *JoinConfig {
 	j["Relay"] = "true"
 	return &j
